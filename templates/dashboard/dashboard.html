@@ -1,0 +1,16 @@
+{% include 'base.html' %}
+{% load static %}
+
+<!---  use link block to reference scrits and css from other html file -->
+{% block links %} 
+
+{% endblock %}
+
+
+<!---  use title block to add custom title from other html file -->
+{% block title %} <title> Dashboard </title> {% endblock %}
+
+<!---  use content block to fill content from other html file -->
+{% block content %}
+    <h4> body of dashboard goes here ...</h4>
+{% endblock %}

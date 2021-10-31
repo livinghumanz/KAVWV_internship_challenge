@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!---  use title block to add custom title from other html file -->
+    {% block title %} {% endblock %} 
+
+   <!---  use link block to reference scrits and css from other html file -->
+   {% block links %} {% endblock %}
+
+</head>
+<body>
+    <!--------------
+        Implement your navbar here 
+        ---------------------
+        -----------------
+    -->
+
+    <!---  use content block to fill content from other html file -->
+    {% block content %}
+    {% endblock %}
+
+    <!--------------
+        Implement your Footer here 
+        ---------------------
+        -----------------
+    -->
+
+</body>
+</html>

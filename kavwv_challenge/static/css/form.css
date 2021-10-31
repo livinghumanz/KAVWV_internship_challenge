@@ -1,0 +1,12 @@
+.regform{
+    width: 60%;
+    margin-left: 4%;
+    padding: 3%; 
+    background-color: rgba(120, 125, 150, 0.295);
+  }
+ /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the wnavbar (.icon) */
+ @media screen and (max-width: 900px) {
+    .regform{
+        width: 90%;
+    }
+  }

@@ -1,0 +1,86 @@
+{% include 'base.html' %}
+{% load static %}
+
+<!---  use title block to add custom title from other html file -->
+{% block title %} <title>Dashboard Registration</title> {% endblock %}
+
+<!---  use link block to reference scrits and css from other html file -->
+{% block links %} 
+<meta name="description" content=" KAVWV internship challenge" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+{% endblock %}
+
+<!---  use content block to fill content from other html file -->
+{% block content %}
+<div class="regform" style="margin-top: 1%; padding: 1%; background-color: rgba(120, 125, 150, 0.096);">
+    <h2> KAVWV Internship Challenge 2021 Winter </h2>
+    <p>Feel free to add any aditional Details/ modify the form as per your interest</p>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col" id="admission" style="padding: 3%;">
+            <h2 > REGISTRATION </h2>
+            <form action="{% url 'stdashboard' %}" enctype="multipart/form-data" method="POST" class="regform">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="Adid">ID Number: </label>
+                    <input type="input" name="Adid" class="form-control" id="Adid" placeholder="ID No/ Admision number" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="Sname">Name: </label>
+                    <input type="input" name="Sname" class="form-control" id="Sname" placeholder="Name as in ID" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="dob">DOB: </label>
+                    <input type="date" name="dob" class="form-control" id="dob" placeholder="Date of birth" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="aadhar">Aadhar Number: </label>
+                    <input type="input" name="aadhar" class="form-control" id="aadhar" placeholder="Aadhar Number" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="dep">Course: </label>
+                    <input type="input" name="dep" class="form-control" id="dep" placeholder="Course/Department" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="yos">class of study: </label>
+                    <input type="input" name="yos" class="form-control" id="yos" placeholder="class/ year od study" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="college">School/College/University: </label>
+                    <input type="input" name="college" class="form-control" id="college" placeholder="School/College/University Name" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="contact">Number: </label>
+                    <input type="tel" name="contact" class="form-control" id="contact" placeholder="Contact Number" pattern="[0-9]{10}" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="admit-mail">Email address</label>
+                    <input type="email" name="admit-mail" class="form-control" id="admit-mail" aria-describedby="emailHelp" placeholder="Enter email" required>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div><br>
+                <div class="form-group">
+                    <label for="fname">Father name: </label>
+                    <input type="input" name="fname" class="form-control" id="fname" placeholder="Father Name" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="focc">Father Occupation: </label>
+                    <input type="input" name="focc" class="form-control" id="focc" placeholder="Father Occupation" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="mname">Mother name: </label>
+                    <input type="input" name="mname" class="form-control" id="fname" placeholder="Mother Name" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="mocc">Mother Occupation: </label>
+                    <input type="input" name="mocc" class="form-control" id="fname" placeholder="Mother Occupation" required>
+                </div><br>
+                <center><button type="submit" class="btn btn-primary">Submit</button></center>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
