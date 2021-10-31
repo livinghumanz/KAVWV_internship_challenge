@@ -22,7 +22,7 @@ It is not necessary to Create a model and push the data to the database, there i
 
 ## Challenge setup
 1. download the git repo to your local
-2. install requirements.txt $python -m pip install -r requirements.txt
+2. install requirements.txt ``` $python -m pip install -r requirements.txt ```
 3. Assume you are using python3
 
 ## How to initial run the project
