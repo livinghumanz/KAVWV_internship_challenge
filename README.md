@@ -39,15 +39,15 @@ It is not necessary to Create a model and push the data to the database, there i
 6. Send us the walk-through video link along with git hub repository link over the mail **_Reply to the mail from KAVWV (info.kavwv@gmail.com) with the github link_**
 
 ## Project structure
-
+```bash
 KAVWV_internship_challenge
 ├── dashboard
 │   ├── admin.py
 │   ├── apps.py
 │   ├── models.py
 │   ├── tests.py
-│   ├── [ ]urls.py
-│   └── [ ]views.py
+│   ├── [ ] urls.py
+│   └── [ ] views.py
 ├── kavwv_challenge
 │   ├── asgi.py
 │   ├── settings.py
@@ -62,5 +62,6 @@ KAVWV_internship_challenge
 ├── templates
 │   ├── base.html **_file to create a base layout_**
 │   ├── dashboard
-│   │   └── [ ]dashboard.html **_Design your dashboard_**
-│   └── [x]index.html **_contains form_**
+│   │   └── [ ] dashboard.html **_Design your dashboard_**
+│   └── [x] index.html **_contains form_**
+```
